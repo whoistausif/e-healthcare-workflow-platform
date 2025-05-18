@@ -1,16 +1,10 @@
-services:
-  db:
-    image: mysql:5.7
-    container_name: db
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: healthcare
-    volumes:
-      - db_data:/var/lib/mysql
+version: "3.8"
 
+services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:80"
     volumes:
@@ -18,5 +12,13 @@ services:
     depends_on:
       - db
 
-volumes:
-  db_data:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ehealth
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
