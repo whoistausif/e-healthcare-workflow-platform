@@ -1,0 +1,501 @@
+/* =================== YOUR ORIGINAL CSS =================== */
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #f0f4f8;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 150px;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-info img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.welcome-text {
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+.logout-btn {
+    background: #0062cc;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 260px;
+    height: calc(100vh - 70px);
+    background: #0062cc;
+    padding: 20px;
+    color: #fff;
+    z-index: 1000;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.sidebar a:hover {
+    background-color: #005c99;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    margin-top: 80px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Card Styles */
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.4s ease;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #0062cc);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.card:hover::before {
+    left: 0;
+}
+
+.card i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #0062cc;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+.card p {
+    font-size: 20px;
+}
+
+.card h3,
+.card p {
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.card:hover i,
+.card:hover h3,
+.card:hover p {
+    color: #fff;
+}
+
+/* Profile Form */
+.profile-section {
+    margin-left: 250px;
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.profile-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-form .form-group {
+    margin-bottom: 25px;
+}
+
+.profile-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #002f4b;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="password"],
+.profile-form input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.profile-form input[type="file"] {
+    padding: 6px;
+}
+
+.profile-form .profile-pic-preview img {
+    width: 100px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #007bff;
+}
+
+.profile-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #0062cc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.profile-form button:hover {
+    background-color: #004ea1;
+}
+
+/* Admin List & Form Section */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    padding: 20px;
+}
+
+.admin-list {
+    flex: 1;
+    margin-right: 20px;
+    margin-left: 270px;
+    /* margin-top: 100px; */
+}
+
+.admin-list table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.admin-list table th, .admin-list table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.admin-list table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.admin-list img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.admin-actions button {
+    margin-right: 5px;
+}
+
+.admin-form {
+    flex: 1;
+    /* margin-top: 100px; */
+    margin-right: 100px;
+}
+
+.admin-form .form-group {
+    margin-bottom: 15px;
+}
+
+.admin-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.admin-form button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Job Request Section */
+.job-request-wrapper {
+    margin-left: 250px;
+    margin-top: 100px;
+    padding: 2rem;
+    background-color: #f8f8f8;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.job-request-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+    color: #111827;
+}
+
+.job-request-table-container {
+    overflow-x: auto;
+   
+    border-radius: 0.5rem;
+}
+
+.job-request-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.job-request-table th{
+    padding: 1rem;
+    text-align: left;
+    background-color: #007cf7 !important;
+    color: #fff;
+  
+}
+
+.job-request-table td {
+    padding: 1rem;
+    text-align: left;
+    
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.job-request-table th {
+    background-color: #f3f4f6;
+    color: #f0f6ff;
+    font-weight: 600;
+}
+
+.job-request-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.btn-approve,
+.btn-reject {
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-approve {
+    background-color: #22c55e;
+    color: white;
+    margin-right: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-approve:hover {
+    background-color: #16a34a;
+}
+
+.btn-reject {
+    background-color: #ef4444;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.btn-reject:hover {
+    background-color: #dc2626;
+}
+
+/* Hide all section panels by default */
+.section {
+    display: none;
+}
+
+/* =================== DOCTOR MANAGE SECTION =================== */
+.doctor-manage-wrapper {
+    margin-left: 250px;
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.doctor-manage-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.doctor-manage-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.doctor-manage-table th,
+.doctor-manage-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.doctor-manage-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.doctor-manage-table td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-remove {
+    padding: 6px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-remove:hover {
+    background-color: #c82333;
+}
+
+/* =================== RESPONSIVE FIXES =================== */
+@media (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .job-request-wrapper,
+    .profile-section,
+    .admin-list,
+    .doctor-manage-wrapper {
+        margin-left: 0;
+    }
+}
+
+
+.btn-remove {
+    padding: 6px 12px;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-remove:hover {
+    background-color: #dc2626;
+}
+
+.btn-edit {
+    padding: 6px 12px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: #138496;
+}
+
+.doctor-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
