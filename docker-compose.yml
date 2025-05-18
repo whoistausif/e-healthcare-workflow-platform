@@ -1,18 +1,17 @@
-version: '3.8'
-
 services:
+  db:
+    image: mysql:5.7
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: healthcare
+    ports:
+      - "3306:3306"
+
   web:
     build: .
     ports:
       - "8080:80"
     depends_on:
       - db
-
-  db:
-    image: mysql:8.0
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: healthcare
-    ports:
-      - "3306:3306"
