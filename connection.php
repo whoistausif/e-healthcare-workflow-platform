@@ -1,7 +1,7 @@
 <?php
 $host = 'db'; // must match service name in docker-compose.yml
 $user = 'root';
-$pass = 'root';
+$pass = 'password';
 $dbname = 'healthcare';
 
 $conn = new mysqli($host, $user, $pass, $dbname);
