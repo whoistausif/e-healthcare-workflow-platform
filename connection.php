@@ -1,8 +1,12 @@
 <?php
-$conn = new mysqli('db', 'root', 'root', 'healthcare');
+$host = 'db'; // must match service name in docker-compose.yml
+$user = 'root';
+$pass = 'root';
+$dbname = 'healthcare';
 
-// Check connection
+$conn = new mysqli($host, $user, $pass, $dbname);
+
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("❌ Connection failed: " . $conn->connect_error);
 }
 ?>
