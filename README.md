@@ -1,6 +1,4 @@
-Here is the updated LinkedIn/GitHub-style **README** file with the **Contributors** section added:
 
----
 
 ## 🏥 E-Healthcare Workflow Platform
 
@@ -53,7 +51,7 @@ The E-Healthcare Workflow Platform is a web-based system aimed at modernizing th
 
 * `admin`
 * `doctor`
-* `pateint` *(note: original typo retained from source)*
+* `pateint` 
 * `appointment`
 * `report`
 * `income`
@@ -65,7 +63,8 @@ The E-Healthcare Workflow Platform is a web-based system aimed at modernizing th
 
 ### 📸 Screenshots
 
-*(Include screenshots or system UI images here if available)*
+
+![Screenshot 2025-05-18 152035](https://github.com/user-attachments/assets/1c514c17-babc-460f-b5c2-836d1b5b55dc)
 
 ---
 
