@@ -61,13 +61,6 @@ The E-Healthcare Workflow Platform is a web-based system aimed at modernizing th
 
 ---
 
-### 📸 Screenshots
-
-
-![Screenshot 2025-05-18 152035](https://github.com/user-attachments/assets/1c514c17-babc-460f-b5c2-836d1b5b55dc)
-
----
-
 ### 🚀 Future Enhancements
 
 * Resume upload for doctors in job applications
@@ -79,9 +72,9 @@ The E-Healthcare Workflow Platform is a web-based system aimed at modernizing th
 
 ### 🤝 Contributors
 
-* **Mohd Tausif** – [GitHub](https://github.com/yourgithub) | [LinkedIn](https://linkedin.com/in/your-profile) *(Project Lead & Full Stack Developer)*
-* **Gagandeep Chandrakar** – Backend Development
-* **Aniket Gujar** – UI/UX & Frontend Design
+* **Mohammad Tausif** – [GitHub](https://github.com/whoistausif/) | [LinkedIn](https://www.linkedin.com/in/mohammadtausif07/) *(Project Lead & Full Stack Developer)*
+* **Gagandeep Chandrakar** – [GitHub](https://github.com/yourgithub) | [LinkedIn](https://linkedin.com/in/your-profile) *(Database lead Design)*
+* **Aniket Gujar** – [GitHub](https://github.com/yourgithub) | [LinkedIn](https://www.linkedin.com/in/aniket-gujar-09165930a/) *(UI/UX & Frontend Design)*
 
 ---
 
@@ -91,11 +84,3 @@ The E-Healthcare Workflow Platform is a web-based system aimed at modernizing th
 
 ---
 
-### 📬 Contact
-
-📧 Email: [your.email@example.com](mailto:your.email@example.com)
-🔗 LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-
----
-
-Would you like this exported as a `README.md` file or used for your LinkedIn post format?
